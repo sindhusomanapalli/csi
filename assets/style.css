@@ -7,8 +7,9 @@
     --muted: #6b6b6b;
     --accent: #c59d5f;
     --accent-dark: #b58846;
+    --accent-logo: #720208;
     --card: #fbf8f5;
-    --max-width: 1200px;
+    --max-width: 1300px;
 }
 
 * {
@@ -31,32 +32,39 @@ a {
 /* NAVBAR */
 
 .nav-bg {
+    padding: 0px 0;
     background: rgba(255, 255, 255, 0.96);
     backdrop-filter: blur(4px);
     border-bottom: 1px solid #f0f0f0
 }
 
 .logo-img {
-    height: 46px;
+    height: 90px;
     width: auto
+}
+
+.gallery-img {
+    width: auto;
+    height: 240px;
+    /* Increase this value to make images bigger */
+    object-fit: cover;
+    border-radius: 12px;
+    /* optional but looks better */
 }
 
 .brand-title {
     font-weight: 700;
-    font-size: 15px;
-    color: var(--text)
-}
-
-.brand-sub {
-    font-size: 11px;
-    color: var(--muted)
+    font-size: 20px;
+    background: linear-gradient(90deg, #8B1E16, #D9481F, #F26522, #FF7A00);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
 }
 
 
 /* hero */
 
 .hero {
-    padding: 120px 0 40px;
+    padding: 120px 0 10px;
     background: linear-gradient(180deg, rgba(197, 157, 95, 0.02), transparent);
 }
 
@@ -74,12 +82,12 @@ a {
     padding: 0;
     margin: 12px 0 0;
     display: flex;
-    gap: 18px;
+    gap: 30px;
     flex-wrap: wrap
 }
 
 .contact-inline a {
-    color: var(--accent);
+    color: var(--accent-logo);
     text-decoration: none
 }
 
@@ -87,7 +95,14 @@ a {
 /* hero visual card */
 
 .hero-card {
-    position: relative
+    position: relative;
+}
+
+.hero-card img {
+    width: 100%;
+    height: 420px;
+    /* increase this value */
+    object-fit: cover;
 }
 
 .hero-badge {
@@ -122,7 +137,7 @@ a {
 
 .section-title {
     font-weight: 700;
-    margin-bottom: 6px
+    margin-bottom: 10px
 }
 
 
@@ -134,7 +149,7 @@ a {
 }
 
 .card {
-    border-radius: 12px;
+    border-radius: 1px;
     overflow: hidden
 }
 
@@ -147,7 +162,7 @@ a {
 }
 
 .footer-logo {
-    height: 52px;
+    height: 90px;
 }
 
 
@@ -179,6 +194,19 @@ a {
 .contact-form label {
     font-weight: 600;
     font-size: 13px
+}
+
+.social-icons img {
+    width: 30px;
+    height: 30px;
+    /* force equal size */
+    border-radius: 50%;
+    object-fit: cover;
+    transition: transform .2s ease-in-out;
+}
+
+.social-icons img:hover {
+    transform: scale(1.2);
 }
 
 
